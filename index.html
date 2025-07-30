@@ -7,6 +7,109 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    #offers {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    
+    #offers.show {
+      display: block;
+      opacity: 1;
+    }
+    
+    /* Style pour la section Avis */
+    .reviews-section {
+      padding: 80px 0;
+      background-color: #f9f9f9;
+    }
+    
+    .reviews-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin: 40px 0;
+    }
+    
+    .review-card {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .review-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+    
+    .review-stars {
+      color: #d4af37;
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+    
+    .review-content {
+      font-style: italic;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    
+    .review-author {
+      font-weight: 600;
+      color: #333;
+    }
+    
+    .review-destination {
+      color: #888;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+    
+    .reviews-cta {
+      text-align: center;
+      margin-top: 40px;
+    }
+    
+    .reviews-cta p {
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+    
+    .reviews-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 2.2rem;
+      letter-spacing: 1.5px;
+      color: #333;
+      text-align: center;
+      margin-bottom: 2.5rem;
+      position: relative;
+      padding-bottom: 1.2rem;
+      line-height: 1.4;
+    }
+    
+    .reviews-section h2::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 1px;
+      background: linear-gradient(to right, rgba(212, 175, 55, 0), rgba(212, 175, 55, 0.8), rgba(212, 175, 55, 0));
+    }
+    
+    .reviews-section h2 span {
+      display: block;
+      font-style: italic;
+      margin-top: 0.5rem;
+      font-size: 1.8rem;
+      color: #9e8a3f;
+    }
+  </style>
 </head>
 <body>
  <nav id="navbar">
@@ -16,7 +119,7 @@
   <div class="nav-links" id="navLinks">
     <a href="#home" data-fr="Accueil" data-en="Home">Accueil</a>
     <a href="#voyages" data-fr="Voyages" data-en="Travel">Voyages</a>
-    <a href="#offers" data-fr="Offres" data-en="Offers">Offres</a>
+    <a href="#reviews" data-fr="Avis" data-en="Reviews">Avis</a>
     <a href="#about" data-fr="À propos" data-en="About">À propos</a>
     <a href="#contact" data-fr="Contact" data-en="Contact">Contact</a>
     <select class="lang-select" id="langSelect">
@@ -46,49 +149,54 @@
   </div>
   <div class="hero-content">
     <h1 class="hero-title" 
-        data-fr="Le côté obscur du paradis" 
-        data-en="The Dark Side of Paradise">
-      The Dark Side of Paradise
+        data-fr="La prémice promue du paradis" 
+        data-en="The Promised Premise of Paradise">
+      La prémice promue du paradis
     </h1>
     <p class="hero-text" 
        data-fr="Découvrez le luxe caché à travers notre sélection exclusive d'îles privées et de retraites luxueuses, conçues pour ceux qui recherchent l'extraordinaire." 
        data-en="Discover the hidden luxury through our exclusive selection of private islands and luxury retreats, designed for those who seek the extraordinary.">
       Discover the hidden luxury through our exclusive selection of private islands and luxury retreats, designed for those who seek the extraordinary.
     </p>
-    <a href="#offers" class="btn btn-home" data-fr="Explorer" data-en="Explore Now">Explore Now</a>
+    <a href="#voyages" class="btn btn-home" data-fr="Explorer" data-en="Explore Now">Explore Now</a>
   </div>
 </section>
 
-<!-- Section Voyages Luxueuse -->
+<!-- Section Voyages avec traduction -->
 <section id="voyages" class="voyages-section section-fadein">
   <div class="hero-slider">
     <div class="hero-slide active" style="background-image: url('images/Voyages/1.png');"></div>
     <!-- Ajoute d'autres slides si tu veux un slider -->
   </div>
   <div class="voyages-container"> 
-    <h2 class="voyages-title">Expériences exclusives</h2>
-    <p class="voyages-intro">
-      Laissez-vous guider vers des expériences uniques, conçues sur-mesure pour révéler l’extraordinaire dans chaque détail. Notre équipe imagine pour vous des voyages confidentiels, élégants et inoubliables.
+    <h2 class="voyages-title" data-fr="Expériences exclusives" data-en="Exclusive Experiences">Expériences exclusives</h2>
+    <p class="voyages-intro" data-fr="Laissez-vous guider vers des expériences uniques, conçues sur-mesure pour révéler l'extraordinaire dans chaque détail. Notre équipe imagine pour vous des voyages confidentiels, élégants et inoubliables." 
+       data-en="Let yourself be guided towards unique experiences, tailor-made to reveal the extraordinary in every detail. Our team creates confidential, elegant and unforgettable journeys for you.">
+      Laissez-vous guider vers des expériences uniques, conçues sur-mesure pour révéler l'extraordinaire dans chaque détail. Notre équipe imagine pour vous des voyages confidentiels, élégants et inoubliables.
     </p>
     <div class="voyages-categories">
       <div class="voyage-cat">
-        <h3>Signature</h3>
-        <p>Itinéraires ultra personnalisés, luxe discret, accès privilégiés.</p>
+        <h3 data-fr="Signature" data-en="Signature">Signature</h3>
+        <p data-fr="Itinéraires ultra personnalisés, luxe discret, accès privilégiés." 
+           data-en="Ultra-personalized itineraries, discreet luxury, privileged access.">Itinéraires ultra personnalisés, luxe discret, accès privilégiés.</p>
       </div>
       <div class="voyage-cat">
-        <h3>Mystère</h3>
-        <p>Destination surprise, révélée à la dernière minute pour une aventure inédite.</p>
+        <h3 data-fr="Mystère" data-en="Mystery">Mystère</h3>
+        <p data-fr="Destination surprise, révélée à la dernière minute pour une aventure inédite." 
+           data-en="Surprise destination, revealed at the last minute for an unprecedented adventure.">Destination surprise, révélée à la dernière minute pour une aventure inédite.</p>
       </div>
       <div class="voyage-cat">
-        <h3>Thématiques rares</h3>
-        <p>Digital detox, road-trips en voitures de collection, séjours œnologiques…</p>
+        <h3 data-fr="Thématiques rares" data-en="Rare Themes">Thématiques rares</h3>
+        <p data-fr="Digital detox, road-trips en voitures de collection, séjours œnologiques…" 
+           data-en="Digital detox, vintage car road trips, wine retreats...">Digital detox, road-trips en voitures de collection, séjours œnologiques…</p>
       </div>
       <div class="voyage-cat">
-        <h3>Abonnement Prestige</h3>
-        <p>Concierge dédié, offres exclusives, surprises trimestrielles.</p>
+        <h3 data-fr="Abonnement Prestige" data-en="Prestige Membership">Abonnement Prestige</h3>
+        <p data-fr="Concierge dédié, offres exclusives, surprises trimestrielles." 
+           data-en="Dedicated concierge, exclusive offers, quarterly surprises.">Concierge dédié, offres exclusives, surprises trimestrielles.</p>
       </div>
     </div>
-    <a href="#form-section" class="btn">Créer mon voyage</a>
+    <a href="javascript:void(0);" onclick="showOffers()" class="btn" data-fr="Créer mon voyage" data-en="Create my journey">Créer mon voyage</a>
   </div>
 </section>
 
@@ -155,44 +263,44 @@
 <!-- Section formulaire dynamique (coller à la fin de la section offres) -->
 <section id="form-section" style="display:none;" class="questionnaire-section">
   <div class="form-container">
-    <h2 class="form-title">Réservez votre expérience</h2>
+    <h2 class="form-title" data-fr="Réservez votre expérience" data-en="Book your experience">Réservez votre expérience</h2>
     <div id="selected-pack-name" style="color:#d4af37;font-weight:700;margin-bottom:18px;text-align:center;"></div>
     <form id="dynamic-form" action="https://formsubmit.co/reservation@theblackonyx.fr" method="POST">
       <input type="hidden" name="pack" id="selected-pack">
       <div class="form-group">
-        <label>Nom & Prénom</label>
+        <label data-fr="Nom & Prénom" data-en="Full Name">Nom & Prénom</label>
         <input type="text" name="nom" required>
       </div>
       <div class="form-group">
-        <label>Email</label>
+        <label data-fr="Email" data-en="Email">Email</label>
         <input type="email" name="email" required>
       </div>
       <div class="form-group">
-        <label>Téléphone</label>
+        <label data-fr="Téléphone" data-en="Phone">Téléphone</label>
         <input type="tel" name="telephone" required>
       </div>
       <div class="form-group">
-        <label>Nombre de voyageurs</label>
+        <label data-fr="Nombre de voyageurs" data-en="Number of travelers">Nombre de voyageurs</label>
         <input type="number" name="voyageurs" min="1" required>
       </div>
       <div class="form-group">
-        <label>Budget total (€)</label>
+        <label data-fr="Budget total (€)" data-en="Total budget (€)">Budget total (€)</label>
         <input type="text" name="budget" required>
       </div>
       <div class="form-group">
-        <label>Dates de début</label>
+        <label data-fr="Dates de début" data-en="Start date">Dates de début</label>
         <input type="date" id="offres_date_debut" name="date_debut" required>
       </div>
       <div class="form-group">
-        <label>Dates de fin</label>
+        <label data-fr="Dates de fin" data-en="End date">Dates de fin</label>
         <input type="date" id="offres_date_fin" name="date_fin" required>
       </div>
       <div class="form-group">
-        <label>Résumé dates & durée</label>
-        <input type="text" id="offres_dates_duree" name="Dates / Durée" readonly placeholder="Ex : 15/08/2025 - 22/08/2025 - 7 jours">
+        <label data-fr="Résumé dates & durée" data-en="Dates & duration summary">Résumé dates & durée</label>
+        <input type="text" id="offres_dates_duree" name="Dates / Durée" readonly data-fr-placeholder="Ex : 15/08/2025 - 22/08/2025 - 7 jours" data-en-placeholder="Ex: 08/15/2025 - 08/22/2025 - 7 days" placeholder="Ex : 15/08/2025 - 22/08/2025 - 7 jours">
       </div>
       <div id="extra-questions"></div>
-      <button type="submit" class="submit-btn">Envoyer</button>
+      <button type="submit" class="submit-btn" data-fr="Envoyer" data-en="Submit">Envoyer</button>
     </form>
   </div>
 </section>
@@ -204,45 +312,111 @@ function showForm(pack) {
   const packInput = document.getElementById("selected-pack");
   const packNameDiv = document.getElementById("selected-pack-name");
   const extra = document.getElementById("extra-questions");
+  const currentLang = document.getElementById('langSelect').value;
 
   formSection.style.display = "block";
   packInput.value = pack;
   packNameDiv.textContent = pack;
   extra.innerHTML = "";
 
-  // Questions dynamiques selon le pack (optionnel)
-  if (pack.includes("Signature")) {
+  // Questions dynamiques selon le pack avec support multilingue
+  if (pack.includes("Signature") || pack.includes("Tailored")) {
     extra.innerHTML = `
       <div class="form-group">
-        <label>Préférences (style, rythme, destinations)</label>
+        <label data-fr="Destination souhaitée" data-en="Desired destination">
+          ${currentLang === 'en' ? 'Desired destination' : 'Destination souhaitée'}
+        </label>
+        <input type="text" name="destination" required>
+      </div>
+      <div class="form-group">
+        <label data-fr="Préférences (style, rythme)" data-en="Preferences (style, pace)">
+          ${currentLang === 'en' ? 'Preferences (style, pace)' : 'Préférences (style, rythme)'}
+        </label>
         <textarea name="preferences" rows="4" required></textarea>
       </div>`;
-  } else if (pack.includes("Mystère")) {
+  } else if (pack.includes("Mystère") || pack.includes("Mystery")) {
     extra.innerHTML = `
       <div class="form-group">
-        <label>Ce que vous aimez (ambiance, luxe...)</label>
+        <label data-fr="Ce que vous aimez (ambiance, luxe...)" data-en="What you like (atmosphere, luxury...)">
+          ${currentLang === 'en' ? 'What you like (atmosphere, luxury...)' : 'Ce que vous aimez (ambiance, luxe...)'}
+        </label>
         <textarea name="preferences_mystere" rows="4" required></textarea>
       </div>
       <div class="form-group">
-        <label>Occasion spéciale ?</label>
+        <label data-fr="Occasion spéciale ?" data-en="Special occasion?">
+          ${currentLang === 'en' ? 'Special occasion?' : 'Occasion spéciale ?'}
+        </label>
         <input type="text" name="occasion_speciale">
       </div>`;
-  } else if (pack.includes("Thématiques")) {
+  } else if (pack.includes("Thématiques") || pack.includes("Themes")) {
     extra.innerHTML = `
       <div class="form-group">
-        <label>Thématique désirée</label>
+        <label data-fr="Thématique désirée" data-en="Desired theme">
+          ${currentLang === 'en' ? 'Desired theme' : 'Thématique désirée'}
+        </label>
         <input type="text" name="thematique" required>
+      </div>
+      <div class="form-group">
+        <label data-fr="Destination souhaitée" data-en="Desired destination">
+          ${currentLang === 'en' ? 'Desired destination' : 'Destination souhaitée'}
+        </label>
+        <input type="text" name="destination" required>
       </div>`;
-  } else if (pack.includes("Abonnement")) {
+  } else if (pack.includes("Abonnement") || pack.includes("Membership")) {
     extra.innerHTML = `
       <div class="form-group">
-        <label>Souhaitez-vous être rappelé ?</label>
+        <label data-fr="Nombre de personnes comprises dans l'abonnement" data-en="Number of people included in the membership">
+          ${currentLang === 'en' ? 'Number of people included in the membership' : 'Nombre de personnes comprises dans l\'abonnement'}
+        </label>
+        <input type="number" name="personnes_abonnement" min="1" required>
+      </div>
+      <div class="form-group">
+        <label data-fr="Budget par an (facultatif)" data-en="Annual budget (optional)">
+          ${currentLang === 'en' ? 'Annual budget (optional)' : 'Budget par an (facultatif)'}
+        </label>
+        <input type="text" name="budget_annuel" placeholder="${currentLang === 'en' ? 'Can be discussed later' : 'Peut être discuté ultérieurement'}">
+      </div>
+      <div class="form-group">
+        <label data-fr="À quelle fréquence voyagez-vous ou voulez-vous voyager ?" data-en="How often do you travel or want to travel?">
+          ${currentLang === 'en' ? 'How often do you travel or want to travel?' : 'À quelle fréquence voyagez-vous ou voulez-vous voyager ?'}
+        </label>
+        <select name="frequence_voyage">
+          <option value="mensuel" data-fr="Mensuel" data-en="Monthly">${currentLang === 'en' ? 'Monthly' : 'Mensuel'}</option>
+          <option value="trimestriel" data-fr="Trimestriel" data-en="Quarterly">${currentLang === 'en' ? 'Quarterly' : 'Trimestriel'}</option>
+          <option value="semestriel" data-fr="Semestriel" data-en="Bi-annually">${currentLang === 'en' ? 'Bi-annually' : 'Semestriel'}</option>
+          <option value="annuel" data-fr="Annuel" data-en="Annually">${currentLang === 'en' ? 'Annually' : 'Annuel'}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label data-fr="Exigences particulières" data-en="Specific requirements">
+          ${currentLang === 'en' ? 'Specific requirements' : 'Exigences particulières'}
+        </label>
+        <textarea name="exigences" rows="4" placeholder="${currentLang === 'en' ? 'Your preferences, requirements or special needs' : 'Vos préférences, exigences ou besoins particuliers'}"></textarea>
+      </div>
+      <div class="form-group">
+        <label data-fr="Souhaitez-vous être rappelé ?" data-en="Would you like to be called back?">
+          ${currentLang === 'en' ? 'Would you like to be called back?' : 'Souhaitez-vous être rappelé ?'}
+        </label>
         <select name="rappel">
-          <option value="oui">Oui</option>
-          <option value="non">Non</option>
+          <option value="oui" data-fr="Oui" data-en="Yes">${currentLang === 'en' ? 'Yes' : 'Oui'}</option>
+          <option value="non" data-fr="Non" data-en="No">${currentLang === 'en' ? 'No' : 'Non'}</option>
         </select>
       </div>`;
   }
+  
+  // Ajouter le choix du moyen de contact préféré pour tous les packs
+  extra.innerHTML += `
+    <div class="form-group">
+      <label data-fr="Moyen de contact préféré" data-en="Preferred contact method">
+        ${currentLang === 'en' ? 'Preferred contact method' : 'Moyen de contact préféré'}
+      </label>
+      <select name="contact_prefere" required>
+        <option value="" disabled selected>${currentLang === 'en' ? 'Please select' : 'Veuillez choisir'}</option>
+        <option value="email">${currentLang === 'en' ? 'Email' : 'Email'}</option>
+        <option value="telephone">${currentLang === 'en' ? 'Phone call' : 'Appel téléphonique'}</option>
+        <option value="sms">${currentLang === 'en' ? 'SMS' : 'SMS'}</option>
+      </select>
+    </div>`;
 
   // Attache les événements après affichage du formulaire
   setTimeout(function() {
@@ -255,9 +429,21 @@ function showForm(pack) {
         const d2 = new Date(fin.value);
         if (d2 >= d1) {
           const diff = Math.round((d2 - d1) / (1000 * 60 * 60 * 24)) + 1;
-          const f1 = debut.value.split('-').reverse().join('/');
-          const f2 = fin.value.split('-').reverse().join('/');
-          resume.value = `${f1} - ${f2} - ${diff} jours`;
+          // Format selon la langue
+          let f1, f2;
+          if (currentLang === 'en') {
+            // Format MM/DD/YYYY pour l'anglais
+            const d1Parts = debut.value.split('-');
+            const d2Parts = fin.value.split('-');
+            f1 = `${d1Parts[1]}/${d1Parts[2]}/${d1Parts[0]}`;
+            f2 = `${d2Parts[1]}/${d2Parts[2]}/${d2Parts[0]}`;
+            resume.value = `${f1} - ${f2} - ${diff} days`;
+          } else {
+            // Format DD/MM/YYYY pour le français
+            f1 = debut.value.split('-').reverse().join('/');
+            f2 = fin.value.split('-').reverse().join('/');
+            resume.value = `${f1} - ${f2} - ${diff} jours`;
+          }
         } else {
           resume.value = '';
         }
@@ -275,9 +461,78 @@ function showForm(pack) {
 }
 </script>
 
+</div> <!-- Fermeture de offers-container -->
+</section> <!-- Fermeture de la section offers -->
 
+<!-- Nouvelle Section Avis -->
+<section id="reviews" class="reviews-section section-fadein">
+  <div class="container">
+    <h2 data-fr="Ils nous ont confié leur rêve. Voici ce qu'ils en disent." 
+        data-en="They entrusted us with their dream. Here's what they say.">
+      Ils nous ont confié leur rêve. Voici ce qu'ils en disent.
+    </h2>
+    
+    <div class="reviews-container">
+      <!-- Premier avis -->
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-content" 
+           data-fr="&quot;Une expérience exceptionnelle ! L'équipe de The Black O'nyx a su créer un voyage sur-mesure parfait pour notre lune de miel. Chaque détail était pensé et le service était irréprochable.&quot;" 
+           data-en="&quot;An exceptional experience! The Black O'nyx team created a perfect tailor-made trip for our honeymoon. Every detail was thoughtfully planned and the service was impeccable.&quot;">
+          "Une expérience exceptionnelle ! L'équipe de The Black O'nyx a su créer un voyage sur-mesure parfait pour notre lune de miel. Chaque détail était pensé et le service était irréprochable."
+        </p>
+        <div class="review-author" data-fr="— Sophie & Marc L." data-en="— Sophie & Marc L.">— Sophie & Marc L.</div>
+        <div class="review-destination" data-fr="Voyage aux Maldives" data-en="Trip to Maldives">Voyage aux Maldives</div>
+      </div>
+      
+      <!-- Deuxième avis -->
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-content" 
+           data-fr="&quot;Service impeccable, destinations exclusives. Chaque détail était pensé pour notre confort. Nous avons particulièrement apprécié les accès privilégiés et les rencontres organisées avec des artisans locaux.&quot;" 
+           data-en="&quot;Impeccable service, exclusive destinations. Every detail was designed for our comfort. We particularly appreciated the privileged access and the organized meetings with local artisans.&quot;">
+          "Service impeccable, destinations exclusives. Chaque détail était pensé pour notre confort. Nous avons particulièrement apprécié les accès privilégiés et les rencontres organisées avec des artisans locaux."
+        </p>
+        <div class="review-author" data-fr="— Catherine M." data-en="— Catherine M.">— Catherine M.</div>
+        <div class="review-destination" data-fr="Road-trip en Italie" data-en="Road-trip in Italy">Road-trip en Italie</div>
+      </div>
+      
+      <!-- Troisième avis -->
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-content" 
+           data-fr="&quot;Le voyage mystère était une surprise incroyable ! Merci pour cette expérience inoubliable. Jamais nous n'aurions pensé découvrir ce lieu magique sans The Black O'nyx.&quot;" 
+           data-en="&quot;The mystery trip was an incredible surprise! Thank you for this unforgettable experience. We would never have thought of discovering this magical place without The Black O'nyx.&quot;">
+          "Le voyage mystère était une surprise incroyable ! Merci pour cette expérience inoubliable. Jamais nous n'aurions pensé découvrir ce lieu magique sans The Black O'nyx."
+        </p>
+        <div class="review-author" data-fr="— Jean-Pierre D." data-en="— Jean-Pierre D.">— Jean-Pierre D.</div>
+        <div class="review-destination" data-fr="Voyage Mystère" data-en="Mystery Trip">Voyage Mystère</div>
+      </div>
+      
+      <!-- Quatrième avis -->
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-content" 
+           data-fr="&quot;Notre abonnement Prestige est la meilleure décision que nous ayons prise. Des surprises de voyage chaque trimestre, toutes plus étonnantes les unes que les autres. Un luxe absolu.&quot;" 
+           data-en="&quot;Our Prestige subscription is the best decision we've ever made. Travel surprises every quarter, each more amazing than the last. Absolute luxury.&quot;">
+          "Notre abonnement Prestige est la meilleure décision que nous ayons prise. Des surprises de voyage chaque trimestre, toutes plus étonnantes les unes que les autres. Un luxe absolu."
+        </p>
+        <div class="review-author" data-fr="— Famille Dubois" data-en="— Dubois Family">— Famille Dubois</div>
+        <div class="review-destination" data-fr="Abonnement Prestige" data-en="Prestige Subscription">Abonnement Prestige</div>
+      </div>
+    </div>
+    
+    <div class="reviews-cta">
+      <p data-fr="Rejoignez nos voyageurs satisfaits et créez votre propre expérience inoubliable." 
+         data-en="Join our satisfied travelers and create your own unforgettable experience.">
+        Rejoignez nos voyageurs satisfaits et créez votre propre expérience inoubliable.
+      </p>
+      <a href="#voyages" class="btn" data-fr="Explorer nos voyages" data-en="Explore our journeys">Explorer nos voyages</a>
+    </div>
+  </div>
+</section>
 
-
+<!-- Section About -->
 <section class="about" id="about">
   <div class="container">
     <h2 data-fr="À propos de nous" data-en="About Us">À propos de nous</h2>
@@ -301,76 +556,81 @@ function showForm(pack) {
   <div class="contact-container">
     <div class="contact-header">
       <img src="images/logo.png" alt="Logo" class="contact-logo" />
-      <h2>Contactez-nous</h2>
-      <p>
-        Une question ? Besoin d’un devis ou d’un conseil personnalisé ? Écrivez-nous, notre équipe vous répondra rapidement.
+      <h2 data-fr="Contactez-nous" data-en="Contact Us">Contactez-nous</h2>
+      <p data-fr="Une question ? Besoin d'un devis ou d'un conseil personnalisé ? Écrivez-nous, notre équipe vous répondra rapidement."
+         data-en="Have a question? Need a quote or personalized advice? Write to us, our team will respond quickly.">
+        Une question ? Besoin d'un devis ou d'un conseil personnalisé ? Écrivez-nous, notre équipe vous répondra rapidement.
       </p>
     </div>
     <form class="contact-form" action="mailto:contact@theblackonyx.com" method="post" enctype="text/plain">
       <div class="form-group">
-        <input type="text" name="name" placeholder="Votre nom" required />
-        <input type="text" name="prenom" placeholder="Votre prenom" required />
-        <input type="email" name="email" placeholder="Votre email" required />
+        <input type="text" name="name" placeholder="Votre nom" data-fr-placeholder="Votre nom" data-en-placeholder="Your name" required />
+        <input type="text" name="prenom" placeholder="Votre prénom" data-fr-placeholder="Votre prénom" data-en-placeholder="Your first name" required />
+        <input type="email" name="email" placeholder="Votre email" data-fr-placeholder="Votre email" data-en-placeholder="Your email" required />
       </div>
-      <textarea name="message" rows="5" placeholder="Votre message..." required></textarea>
-      <button type="submit" class="contact-btn"><span>Envoyer ✨</span></button>
+      <textarea name="message" rows="5" placeholder="Votre message..." data-fr-placeholder="Votre message..." data-en-placeholder="Your message..." required></textarea>
+      <button type="submit" class="contact-btn"><span data-fr="Envoyer ✨" data-en="Send ✨">Envoyer ✨</span></button>
     </form>
     <div class="contact-infos">
       <p><i class="fas fa-envelope"></i> contact@theblackonyx.fr</p>
       <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
-      <p><i class="fas fa-map-marker-alt"></i> 10 Avenue du Luxe, 75000 Paris, France</p>
+      <p><i class="fas fa-map-marker-alt"></i> <span data-fr="10 Avenue du Luxe, 75000 Paris, France" data-en="10 Luxury Avenue, 75000 Paris, France">10 Avenue du Luxe, 75000 Paris, France</span></p>
     </div>
   </div>
 </section>
 
+<!-- Footer avec recommandations traduites et sans section avis -->
 <footer>
   <div class="footer-container">
     <div class="footer-content">
-      <!-- Section Recommandations à gauche -->
+      <!-- Section Recommandations -->
       <div class="footer-affiliation">
-        <h4>Nos recommandations</h4>
+        <h4 data-fr="Nos recommandations" data-en="Our recommendations">Nos recommandations</h4>
         <ul>
           <li>
-            <a href="https://affil.partner1.com/guide-maldives" target="_blank" rel="noopener" title="Guide Maldives (sélectionné par nos experts)">
+            <a href="https://affil.partner1.com/guide-maldives" target="_blank" rel="noopener" 
+               data-fr="Guide Maldives – Sélectionné par nos experts"
+               data-en="Maldives Guide – Selected by our experts">
               Guide Maldives – Sélectionné par nos experts
             </a>
           </li>
           <li>
-            <a href="https://affil.partner2.com/experiences-vin" target="_blank" rel="noopener" title="Expériences œnologiques">
+            <a href="https://affil.partner2.com/experiences-vin" target="_blank" rel="noopener" 
+               data-fr="Expériences œnologiques – Notre sélection"
+               data-en="Wine experiences – Our selection">
               Expériences œnologiques – Notre sélection
             </a>
           </li>
           <li>
-            <a href="https://affil.partner3.com/roadtrip-collection" target="_blank" rel="noopener" title="Road-trips en voitures de collection">
+            <a href="https://affil.partner3.com/roadtrip-collection" target="_blank" rel="noopener" 
+               data-fr="Road-trips en voitures de collection – Nos coups de cœur"
+               data-en="Vintage car road-trips – Our favorites">
               Road-trips en voitures de collection – Nos coups de cœur
             </a>
           </li>
         </ul>
-        <small>Guides inspirants, pas publicitaires. Chaque lien mène vers un partenaire via notre lien affilié.</small>
+        <small data-fr="Guides inspirants, pas publicitaires. Chaque lien mène vers un partenaire via notre lien affilié."
+               data-en="Inspiring guides, not advertisements. Each link leads to a partner via our affiliate link.">
+          Guides inspirants, pas publicitaires. Chaque lien mène vers un partenaire via notre lien affilié.
+        </small>
       </div>
       
-      <!-- Section Avis à droite -->
-      <div class="footer-reviews">
-        <h4>Avis clients</h4>
-        <div class="review-item">
-          <div class="review-stars">★★★★★</div>
-          <p>"Une expérience exceptionnelle ! L'équipe de The Black O'nyx a su créer un voyage sur-mesure parfait pour notre lune de miel."</p>
-          <span class="review-author">— Sophie & Marc L.</span>
-        </div>
-        <div class="review-item">
-          <div class="review-stars">★★★★★</div>
-          <p>"Service impeccable, destinations exclusives. Chaque détail était pensé pour notre confort."</p>
-          <span class="review-author">— Catherine M.</span>
-        </div>
-        <div class="review-item">
-          <div class="review-stars">★★★★★</div>
-          <p>"Le voyage mystère était une surprise incroyable ! Merci pour cette expérience inoubliable."</p>
-          <span class="review-author">— Jean-Pierre D.</span>
-        </div>
+      <!-- Deuxième section utile pour remplacer les avis -->
+      <div class="footer-links">
+        <h4 data-fr="Liens utiles" data-en="Useful links">Liens utiles</h4>
+        <ul>
+          <li><a href="#voyages" data-fr="Nos voyages" data-en="Our journeys">Nos voyages</a></li>
+          <li><a href="#reviews" data-fr="Avis clients" data-en="Client reviews">Avis clients</a></li>
+          <li><a href="#about" data-fr="À propos de nous" data-en="About us">À propos de nous</a></li>
+          <li><a href="#contact" data-fr="Contact" data-en="Contact">Contact</a></li>
+          <li><a href="privacy.html" data-fr="Politique de confidentialité" data-en="Privacy policy">Politique de confidentialité</a></li>
+          <li><a href="terms.html" data-fr="Conditions générales" data-en="Terms and conditions">Conditions générales</a></li>
+        </ul>
       </div>
     </div>
     
-    <p>&copy; 2023 The Black O'Nyx. Tous droits réservés.</p>
+    <p data-fr="&copy; 2023 The Black O'Nyx. Tous droits réservés." 
+       data-en="&copy; 2023 The Black O'Nyx. All rights reserved.">&copy; 2023 The Black O'Nyx. Tous droits réservés.</p>
     <div class="social-links">
       <a href="https://instagram.com/theblacko_nyx" class="social-link" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
       <a href="https://linkedin.com/tonprofil" class="social-link" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
@@ -402,55 +662,66 @@ function showForm(pack) {
         }
       }
     });
+    
+    // Traduire les placeholders des formulaires
+    document.querySelectorAll(`[data-${lang}-placeholder]`).forEach(el => {
+      el.placeholder = el.dataset[lang + 'Placeholder'];
+    });
   }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    switchLanguage('fr');  // Charger FR par défaut
+  });
 
   langSelect.addEventListener('change', () => {
     switchLanguage(langSelect.value);
   });
 
-  // Charger FR par défaut
-  switchLanguage('fr');
+  // Animation luxueuse sur scroll vers Voyages
+  const voyagesLink = document.querySelector('a[href="#voyages"]');
+  const voyagesSection = document.getElementById('voyages');
+  if(voyagesLink && voyagesSection) {
+    voyagesLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      voyagesSection.scrollIntoView({ behavior: 'smooth' });
+      setTimeout(() => {
+        voyagesSection.classList.add('show');
+      }, 100);
+    });
+  }
 
-  document.addEventListener('DOMContentLoaded', function() {
-    // Hero slider
-    const slides = document.querySelectorAll('.hero-slide');
-    let idx = 0;
-    setInterval(() => {
-      slides[idx].classList.remove('active');
-      idx = (idx + 1) % slides.length;
-      slides[idx].classList.add('active');
-    }, 4000);
+  // Animation luxueuse sur scroll vers Contact
+  const contactLink = document.querySelector('a[href="#contact"]');
+  const contactSection = document.getElementById('contact');
+  if(contactLink && contactSection) {
+    contactLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+      setTimeout(() => {
+        contactSection.classList.add('show');
+      }, 100);
+    });
+  }
 
-    // Animation luxueuse sur scroll vers Contact
-    const contactLink = document.querySelector('a[href="#contact"]');
-    const contactSection = document.getElementById('contact');
-    if(contactLink && contactSection) {
-      contactLink.addEventListener('click', function(e) {
-        e.preventDefault();
-        contactSection.classList.remove('section-fadein');
-        setTimeout(function() {
-          contactSection.classList.add('section-fadein');
-          contactSection.scrollIntoView({ behavior: 'smooth' });
-        }, 20);
-      });
-    }
+  // Hero slider
+  let idx = 0;
+  const slides = document.querySelectorAll('.hero-slide');
+  setInterval(() => {
+    slides[idx].classList.remove('active');
+    idx = (idx + 1) % slides.length;
+    slides[idx].classList.add('active');
+  }, 4000);
 
-    // Animation luxueuse sur scroll vers Voyages
-    const voyagesLink = document.querySelector('a[href="#voyages"]');
-    const voyagesSection = document.getElementById('voyages');
-    if(voyagesLink && voyagesSection) {
-      voyagesLink.addEventListener('click', function(e) {
-        e.preventDefault();
-        voyagesSection.classList.remove('section-fadein');
-        setTimeout(function() {
-          voyagesSection.classList.add('section-fadein');
-          voyagesSection.scrollIntoView({ behavior: 'smooth' });
-        }, 20);
-      });
-    }
-  });
-
- 
+  // Ajouter cette fonction pour afficher la section offres
+  function showOffers() {
+    const offersSection = document.getElementById('offers');
+    offersSection.classList.add('show');
+    
+    // Faire défiler vers la section offres avec une animation fluide
+    setTimeout(() => {
+      offersSection.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  }
 </script>
 </body>
 </html>
