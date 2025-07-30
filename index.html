@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Black O'Nyx - Luxury Travel</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+ <nav id="navbar">
+  <div class="logo">
+    <img src="images/Logo/Logo.jpg" alt="The Black O'Nyx logo">
+  </div>
+  <div class="nav-links" id="navLinks">
+    <a href="#home" data-fr="Accueil" data-en="Home">Accueil</a>
+    <a href="#voyages" data-fr="Voyages" data-en="Travel">Voyages</a>
+    <a href="#offers" data-fr="Offres" data-en="Offers">Offres</a>
+    <a href="#about" data-fr="À propos" data-en="About">À propos</a>
+    <a href="#contact" data-fr="Contact" data-en="Contact">Contact</a>
+    <select class="lang-select" id="langSelect">
+      <option value="fr">FR</option>
+      <option value="en">EN</option>
+    </select>
+  </div>
+  <div class="menu-btn" id="menuBtn"><i class="fas fa-bars"></i></div>
+</nav>
+
+<!-- Section Home -->
+<section class="hero" id="home">
+  <div class="hero-slider">
+    <div class="hero-slide active" style="background-image: url('images/Home/1.png');"></div>
+    <div class="hero-slide" style="background-image: url('images/Home/2.png');"></div>
+    <div class="hero-slide" style="background-image: url('images/Home/3.png');"></div>
+    <div class="hero-slide" style="background-image: url('images/Home/4.png');"></div>
+    <div class="hero-slide" style="background-image: url('images/Home/5.png');"></div>
+    <div class="hero-slide" style="background-image: url('images/Home/6.png');"></div>
+    <div class="hero-slide" style="background-image: url('images/Home/7.png');"></div>
+    <div class="hero-slide" style="background-image: url('images/Home/8.png');"></div>
+    <div class="hero-slide" style="background-image: url('images/Home/9.png');"></div>
+    <div class="hero-slide" style="background-image: url('images/Home/10.png');"></div>
+    <div class="hero-slide" style="background-image: url('images/Home/11.png');"></div>
+    <div class="hero-slide" style="background-image: url('images/Home/12.png');"></div>
+    <!-- Ajoute d'autres images si besoin -->
+  </div>
+  <div class="hero-content">
+    <h1 class="hero-title" 
+        data-fr="Le côté obscur du paradis" 
+        data-en="The Dark Side of Paradise">
+      The Dark Side of Paradise
+    </h1>
+    <p class="hero-text" 
+       data-fr="Découvrez le luxe caché à travers notre sélection exclusive d'îles privées et de retraites luxueuses, conçues pour ceux qui recherchent l'extraordinaire." 
+       data-en="Discover the hidden luxury through our exclusive selection of private islands and luxury retreats, designed for those who seek the extraordinary.">
+      Discover the hidden luxury through our exclusive selection of private islands and luxury retreats, designed for those who seek the extraordinary.
+    </p>
+    <a href="#offers" class="btn btn-home" data-fr="Explorer" data-en="Explore Now">Explore Now</a>
+  </div>
+</section>
+
+<!-- Section Voyages Luxueuse -->
+<section id="voyages" class="voyages-section section-fadein">
+  <div class="hero-slider">
+    <div class="hero-slide active" style="background-image: url('images/Voyages/1.png');"></div>
+    <!-- Ajoute d'autres slides si tu veux un slider -->
+  </div>
+  <div class="voyages-container"> 
+    <h2 class="voyages-title">Expériences exclusives</h2>
+    <p class="voyages-intro">
+      Laissez-vous guider vers des expériences uniques, conçues sur-mesure pour révéler l’extraordinaire dans chaque détail. Notre équipe imagine pour vous des voyages confidentiels, élégants et inoubliables.
+    </p>
+    <div class="voyages-categories">
+      <div class="voyage-cat">
+        <h3>Signature</h3>
+        <p>Itinéraires ultra personnalisés, luxe discret, accès privilégiés.</p>
+      </div>
+      <div class="voyage-cat">
+        <h3>Mystère</h3>
+        <p>Destination surprise, révélée à la dernière minute pour une aventure inédite.</p>
+      </div>
+      <div class="voyage-cat">
+        <h3>Thématiques rares</h3>
+        <p>Digital detox, road-trips en voitures de collection, séjours œnologiques…</p>
+      </div>
+      <div class="voyage-cat">
+        <h3>Abonnement Prestige</h3>
+        <p>Concierge dédié, offres exclusives, surprises trimestrielles.</p>
+      </div>
+    </div>
+    <a href="#form-section" class="btn">Créer mon voyage</a>
+  </div>
+</section>
+
+<!-- Section Offres -->
+<section id="offers" class="offers-section pagefadein">
+  <div class="offers-container">
+    <h2 class="offers-title" data-fr="Nos Expériences Exclusives" data-en="Our Exclusive Experiences">
+      Nos Expériences Exclusives
+    </h2>
+    <p class="offers-subtitle" data-fr="Choisissez l’expérience qui vous ressemble" data-en="Choose the journey that suits you">
+      Choisissez l’expérience qui vous ressemble
+    </p>
+
+<div class="pack-grid">
+  <!-- Pack 1 -->
+  <div class="pack-card">
+    <h3 data-fr="Pack 1 : Voyage Signature – Ultra Sur-Mesure" data-en="Pack 1: Signature Journey – Ultra Tailored">
+      Pack 1 : Voyage Signature – Ultra Sur-Mesure
+    </h3>
+    <p data-fr="Création d’un itinéraire personnalisé en moins de 24h, selon les envies et préférences du client (style, rythme, budget, niveau de luxe, etc.)."
+       data-en="Custom itinerary in under 24h, based on preferences (style, pace, budget, luxury level, etc.).">
+       Création d’un itinéraire personnalisé en moins de 24h, selon les envies et préférences.
+    </p>
+    <a href="javascript:void(0);" onclick="showForm('Voyage Signature – Ultra Sur-Mesure')" class="select-pack-btn" data-fr="Je choisis ce pack" data-en="Select this pack">Je choisis ce pack</a>
+  </div>
+
+  <!-- Pack 2 -->
+  <div class="pack-card">
+    <h3 data-fr="Pack 2 : Voyage Mystère Élégance" data-en="Pack 2: Elegant Mystery Journey">
+      Pack 2 : Voyage Mystère Élégance
+    </h3>
+    <p data-fr="Le client donne un budget, des préférences, une date. Voyage surprise, lieu révélé à l’aéroport."
+       data-en="Client provides budget, preferences, date. Surprise trip revealed at the airport.">
+       Voyage surprise, lieu révélé à l’aéroport.
+    </p>
+    <a href="javascript:void(0);" onclick="showForm('Voyage Mystère Élégance')" class="select-pack-btn" data-fr="Je choisis ce pack" data-en="Select this pack">Je choisis ce pack</a>
+  </div>
+
+  <!-- Pack 3 -->
+  <div class="pack-card">
+    <h3 data-fr="Pack 3 : Thématiques Rares & Précieuses" data-en="Pack 3: Rare & Precious Themes">
+      Pack 3 : Thématiques Rares & Précieuses
+    </h3>
+    <p data-fr="Séjours spécialisés : digital detox, road-trips en voitures de collection, voyages œnologiques secrets…"
+       data-en="Specialized stays: digital detox, vintage car road-trips, secret wine journeys…">
+       Séjours spécialisés : digital detox, voitures de collection, œnologie…
+    </p>
+    <a href="javascript:void(0);" onclick="showForm('Thématiques Rares & Précieuses')" class="select-pack-btn" data-fr="Je choisis ce pack" data-en="Select this pack">Je choisis ce pack</a>
+  </div>
+
+  <!-- Pack 4 -->
+  <div class="pack-card">
+    <h3 data-fr="Pack 4 : Abonnement Prestige – Voyage Sans Effort" data-en="Pack 4: Prestige Membership – Effortless Travel">
+      Pack 4 : Abonnement Prestige – Voyage Sans Effort
+    </h3>
+    <p data-fr="Abonnement annuel : tarifs exclusifs, concierge dédié, offres surprises trimestrielles."
+       data-en="Annual subscription: exclusive rates, dedicated concierge, quarterly surprise trips.">
+       Concierge dédié, tarifs exclusifs, surprises trimestrielles.
+    </p>
+    <a href="javascript:void(0);" onclick="showForm('Abonnement Prestige – Voyage Sans Effort')" class="select-pack-btn" data-fr="Je choisis ce pack" data-en="Select this pack">Je choisis ce pack</a>
+  </div>
+</div>
+
+<!-- Section formulaire dynamique (coller à la fin de la section offres) -->
+<section id="form-section" style="display:none;" class="questionnaire-section">
+  <div class="form-container">
+    <h2 class="form-title">Réservez votre expérience</h2>
+    <div id="selected-pack-name" style="color:#d4af37;font-weight:700;margin-bottom:18px;text-align:center;"></div>
+    <form id="dynamic-form" action="https://formsubmit.co/reservation@theblackonyx.fr" method="POST">
+      <input type="hidden" name="pack" id="selected-pack">
+      <div class="form-group">
+        <label>Nom & Prénom</label>
+        <input type="text" name="nom" required>
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label>Téléphone</label>
+        <input type="tel" name="telephone" required>
+      </div>
+      <div class="form-group">
+        <label>Nombre de voyageurs</label>
+        <input type="number" name="voyageurs" min="1" required>
+      </div>
+      <div class="form-group">
+        <label>Budget total (€)</label>
+        <input type="text" name="budget" required>
+      </div>
+      <div class="form-group">
+        <label>Dates de début</label>
+        <input type="date" id="offres_date_debut" name="date_debut" required>
+      </div>
+      <div class="form-group">
+        <label>Dates de fin</label>
+        <input type="date" id="offres_date_fin" name="date_fin" required>
+      </div>
+      <div class="form-group">
+        <label>Résumé dates & durée</label>
+        <input type="text" id="offres_dates_duree" name="Dates / Durée" readonly placeholder="Ex : 15/08/2025 - 22/08/2025 - 7 jours">
+      </div>
+      <div id="extra-questions"></div>
+      <button type="submit" class="submit-btn">Envoyer</button>
+    </form>
+  </div>
+</section>
+
+<!-- JS pour gérer l'affichage dynamique du formulaire -->
+<script>
+function showForm(pack) {
+  const formSection = document.getElementById("form-section");
+  const packInput = document.getElementById("selected-pack");
+  const packNameDiv = document.getElementById("selected-pack-name");
+  const extra = document.getElementById("extra-questions");
+
+  formSection.style.display = "block";
+  packInput.value = pack;
+  packNameDiv.textContent = pack;
+  extra.innerHTML = "";
+
+  // Questions dynamiques selon le pack (optionnel)
+  if (pack.includes("Signature")) {
+    extra.innerHTML = `
+      <div class="form-group">
+        <label>Préférences (style, rythme, destinations)</label>
+        <textarea name="preferences" rows="4" required></textarea>
+      </div>`;
+  } else if (pack.includes("Mystère")) {
+    extra.innerHTML = `
+      <div class="form-group">
+        <label>Ce que vous aimez (ambiance, luxe...)</label>
+        <textarea name="preferences_mystere" rows="4" required></textarea>
+      </div>
+      <div class="form-group">
+        <label>Occasion spéciale ?</label>
+        <input type="text" name="occasion_speciale">
+      </div>`;
+  } else if (pack.includes("Thématiques")) {
+    extra.innerHTML = `
+      <div class="form-group">
+        <label>Thématique désirée</label>
+        <input type="text" name="thematique" required>
+      </div>`;
+  } else if (pack.includes("Abonnement")) {
+    extra.innerHTML = `
+      <div class="form-group">
+        <label>Souhaitez-vous être rappelé ?</label>
+        <select name="rappel">
+          <option value="oui">Oui</option>
+          <option value="non">Non</option>
+        </select>
+      </div>`;
+  }
+
+  // Attache les événements après affichage du formulaire
+  setTimeout(function() {
+    const debut = document.getElementById('offres_date_debut');
+    const fin = document.getElementById('offres_date_fin');
+    const resume = document.getElementById('offres_dates_duree');
+    function updateResume() {
+      if (debut.value && fin.value) {
+        const d1 = new Date(debut.value);
+        const d2 = new Date(fin.value);
+        if (d2 >= d1) {
+          const diff = Math.round((d2 - d1) / (1000 * 60 * 60 * 24)) + 1;
+          const f1 = debut.value.split('-').reverse().join('/');
+          const f2 = fin.value.split('-').reverse().join('/');
+          resume.value = `${f1} - ${f2} - ${diff} jours`;
+        } else {
+          resume.value = '';
+        }
+      } else {
+        resume.value = '';
+      }
+    }
+    if(debut && fin && resume) {
+      debut.addEventListener('change', updateResume);
+      fin.addEventListener('change', updateResume);
+    }
+  }, 50);
+
+  formSection.scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+
+
+
+
+<section class="about" id="about">
+  <div class="container">
+    <h2 data-fr="À propos de nous" data-en="About Us">À propos de nous</h2>
+
+    <p data-fr="L’art du voyage sur-mesure. Voyager, c’est découvrir, ressentir et s’émerveiller. Chez The Black O’nyx, cette conviction guide chacune de nos créations. Nous sommes avant tout des passionnés : des explorateurs curieux, animés par le désir de transformer chaque projet en expérience unique."
+       data-en="The art of tailor-made travel. Traveling means discovering, feeling, and marveling. At The Black O’nyx, this belief guides every journey we craft. We're passionate explorers at heart, driven by a desire to turn every plan into a unique experience.">
+      <strong>L’art du voyage sur-mesure</strong><br><br>
+      Voyager, c’est découvrir, ressentir et s’émerveiller. Chez <em>The Black O’nyx</em>, cette conviction guide chacune de nos créations. Nous sommes avant tout des passionnés : des explorateurs curieux, animés par le désir de transformer chaque projet en expérience unique.
+    </p>
+
+    <p data-fr="Notre mission ? Concevoir des voyages sur-mesure où chaque détail compte. Nous travaillons main dans la main avec des partenaires d’exception et sélectionnons des destinations rares, pour vous offrir des séjours à la hauteur de vos attentes : élégants, authentiques et parfaitement personnalisés."
+       data-en="Our mission? To design tailor-made trips where every detail matters. We collaborate with exceptional partners and handpick rare destinations to offer you elegant, authentic, and perfectly personalized journeys.">
+    <p data-fr="Avec The Black O’nyx, partez en toute confiance : nous veillons à ce que chaque moment soit fluide, mémorable et profondément personnel. Parce qu’un vrai voyage n’est pas seulement un déplacement, mais une histoire qui vous appartient."
+       data-en="With The Black O’nyx, travel with complete peace of mind: we ensure every moment is smooth, memorable, and deeply personal. Because a true journey is more than a trip—it's a story that's yours to tell.">
+      Avec <em>The Black O’nyx</em>, partez en toute confiance : nous veillons à ce que chaque moment soit fluide, mémorable et profondément personnel. Parce qu’un vrai voyage n’est pas seulement un déplacement, mais une histoire qui vous appartient.
+    </p>
+  </div>
+</section>
+
+<section id="contact" class="contact-section">
+  <div class="contact-container">
+    <div class="contact-header">
+      <img src="images/logo.png" alt="Logo" class="contact-logo" />
+      <h2>Contactez-nous</h2>
+      <p>
+        Une question ? Besoin d’un devis ou d’un conseil personnalisé ? Écrivez-nous, notre équipe vous répondra rapidement.
+      </p>
+    </div>
+    <form class="contact-form" action="mailto:contact@theblackonyx.com" method="post" enctype="text/plain">
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Votre nom" required />
+        <input type="text" name="prenom" placeholder="Votre prenom" required />
+        <input type="email" name="email" placeholder="Votre email" required />
+      </div>
+      <textarea name="message" rows="5" placeholder="Votre message..." required></textarea>
+      <button type="submit" class="contact-btn"><span>Envoyer ✨</span></button>
+    </form>
+    <div class="contact-infos">
+      <p><i class="fas fa-envelope"></i> contact@theblackonyx.fr</p>
+      <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+      <p><i class="fas fa-map-marker-alt"></i> 10 Avenue du Luxe, 75000 Paris, France</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-content">
+      <!-- Section Recommandations à gauche -->
+      <div class="footer-affiliation">
+        <h4>Nos recommandations</h4>
+        <ul>
+          <li>
+            <a href="https://affil.partner1.com/guide-maldives" target="_blank" rel="noopener" title="Guide Maldives (sélectionné par nos experts)">
+              Guide Maldives – Sélectionné par nos experts
+            </a>
+          </li>
+          <li>
+            <a href="https://affil.partner2.com/experiences-vin" target="_blank" rel="noopener" title="Expériences œnologiques">
+              Expériences œnologiques – Notre sélection
+            </a>
+          </li>
+          <li>
+            <a href="https://affil.partner3.com/roadtrip-collection" target="_blank" rel="noopener" title="Road-trips en voitures de collection">
+              Road-trips en voitures de collection – Nos coups de cœur
+            </a>
+          </li>
+        </ul>
+        <small>Guides inspirants, pas publicitaires. Chaque lien mène vers un partenaire via notre lien affilié.</small>
+      </div>
+      
+      <!-- Section Avis à droite -->
+      <div class="footer-reviews">
+        <h4>Avis clients</h4>
+        <div class="review-item">
+          <div class="review-stars">★★★★★</div>
+          <p>"Une expérience exceptionnelle ! L'équipe de The Black O'nyx a su créer un voyage sur-mesure parfait pour notre lune de miel."</p>
+          <span class="review-author">— Sophie & Marc L.</span>
+        </div>
+        <div class="review-item">
+          <div class="review-stars">★★★★★</div>
+          <p>"Service impeccable, destinations exclusives. Chaque détail était pensé pour notre confort."</p>
+          <span class="review-author">— Catherine M.</span>
+        </div>
+        <div class="review-item">
+          <div class="review-stars">★★★★★</div>
+          <p>"Le voyage mystère était une surprise incroyable ! Merci pour cette expérience inoubliable."</p>
+          <span class="review-author">— Jean-Pierre D.</span>
+        </div>
+      </div>
+    </div>
+    
+    <p>&copy; 2023 The Black O'Nyx. Tous droits réservés.</p>
+    <div class="social-links">
+      <a href="https://instagram.com/theblacko_nyx" class="social-link" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+      <a href="https://linkedin.com/tonprofil" class="social-link" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://tiktok.com/@theblacko_nyx" class="social-link" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  window.addEventListener('scroll', function () {
+    const navbar = document.getElementById('navbar');
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+
+  const langSelect = document.getElementById('langSelect');
+
+  function switchLanguage(lang) {
+    document.querySelectorAll('[data-fr]').forEach(el => {
+      const translation = el.dataset[lang];
+      if (translation) {
+        if (el.tagName === "A" || el.tagName === "OPTION" || el.tagName === "H2" || el.tagName === "P") {
+          el.textContent = translation;
+        } else {
+          el.innerHTML = translation;
+        }
+      }
+    });
+  }
+
+  langSelect.addEventListener('change', () => {
+    switchLanguage(langSelect.value);
+  });
+
+  // Charger FR par défaut
+  switchLanguage('fr');
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // Hero slider
+    const slides = document.querySelectorAll('.hero-slide');
+    let idx = 0;
+    setInterval(() => {
+      slides[idx].classList.remove('active');
+      idx = (idx + 1) % slides.length;
+      slides[idx].classList.add('active');
+    }, 4000);
+
+    // Animation luxueuse sur scroll vers Contact
+    const contactLink = document.querySelector('a[href="#contact"]');
+    const contactSection = document.getElementById('contact');
+    if(contactLink && contactSection) {
+      contactLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        contactSection.classList.remove('section-fadein');
+        setTimeout(function() {
+          contactSection.classList.add('section-fadein');
+          contactSection.scrollIntoView({ behavior: 'smooth' });
+        }, 20);
+      });
+    }
+
+    // Animation luxueuse sur scroll vers Voyages
+    const voyagesLink = document.querySelector('a[href="#voyages"]');
+    const voyagesSection = document.getElementById('voyages');
+    if(voyagesLink && voyagesSection) {
+      voyagesLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        voyagesSection.classList.remove('section-fadein');
+        setTimeout(function() {
+          voyagesSection.classList.add('section-fadein');
+          voyagesSection.scrollIntoView({ behavior: 'smooth' });
+        }, 20);
+      });
+    }
+  });
+
+ 
+</script>
+</body>
+</html>
